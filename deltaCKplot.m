@@ -3,15 +3,14 @@
 %   Author: Charles S. Peskin
 %           minor modification by Yuan-Xun Bao   
 %
-%   This code plots (calling deltaCK.m) the newly developed 
-%   6-point immersed boundary kernel in [1] and its three continuous 
-%   derivatives.
+%   This code plots (calling deltaCK.m) the new 6-point immersed boundary 
+%   kernel in [1] and its three continuous derivatives.
 %   
 %   Input: 
 %   r: real number in [0,1]
 %   K: second moment constant[1], 
-%   for the new 6-pt kernel, K = 59/60 - sqrt(29)/20;
-%   for the standard 6-pt kernel, K = 0    
+%      for the new 6-pt kernel, K = 59/60 - sqrt(29)/20;
+%      for the standard 6-pt kernel, K = 0    
 %
 %   Notation:
 %   p   = phi
