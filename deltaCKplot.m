@@ -39,15 +39,18 @@ K= 59/60 - sqrt(29)/20;
 
 [pm3 pm2 pm1 p pp1 pp2 dpm3 dpm2 dpm1 dp dpp1 dpp2 d2pm3 d2pm2 d2pm1 d2p d2pp1 d2pp2 d3pm3 d3pm2 d3pm1 d3p d3pp1 d3pp2 flag]=deltaCK(r,K);
     if(~flag)
-      hold on  
+      figure(1)
       plot(r-3,  pm3,r-2,  pm2,r-1,  pm1,r,  p,r+1,  pp1,r+2,  pp2)
+      title('new 6-pt IB kernel')
+      
+      figure(2)
+      hold on;
       plot(r-3, dpm3,r-2, dpm2,r-1, dpm1,r, dp,r+1, dpp1,r+2, dpp2)
       plot(r-3,d2pm3,r-2,d2pm2,r-1,d2pm1,r,d2p,r+1,d2pp1,r+2,d2pp2)
       plot(r-3,d3pm3,r-2,d3pm2,r-1,d3pm1,r,d3p,r+1,d3pp1,r+2,d3pp2)
+      title('derivatives of the new 6-pt IB kernel')
+      hold off
     end
-
-figure(1)
-hold off
 
 %check that defining properties are satisfied:
 
