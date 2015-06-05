@@ -6,7 +6,6 @@
 %
 % *************************************************************************
 
-addpath('../../../IBStaggered/KernelsTesting/Kernels');
 
 K=[];
 % check standard 3pt kernel
