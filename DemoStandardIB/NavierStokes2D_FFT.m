@@ -16,11 +16,11 @@
 % ----------------------------------------------------------------------- %
 
 
-function unew = NavierStokes2D_FFT(u,N,h,dt,mu,rho,S,f,L_hat1,L_hat2)
+function [unew,u] = NavierStokes2D_FFT(u,N,h,dt,mu,rho,S,f,L_hat1,L_hat2)
 
 Nx = N(1); Ny = N(2);
 
-c1 = dt/rho; c2 = mu*dt / (2*rho);
+c1 = dt/rho; c2 = mu*dt/(2*rho);
 
 % poisson solve for pressure p(n+1/2)
 w1=(-rho/dt)*u(:,:,1)+rho*S(:,:,1)-mu/2*Laplacian2D(u(:,:,1),N,h)-f(:,:,1);
