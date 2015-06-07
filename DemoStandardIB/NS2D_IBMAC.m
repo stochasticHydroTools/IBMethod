@@ -94,7 +94,7 @@ for n=2:Nt
             quiver(xx2(sk,sk),yy2(sk,sk),uu(sk,sk),vv(sk,sk),1); hold on;
             plot(mod(X(:,1),L),mod(X(:,2),L),'k-','linewidth',2);    
             xlabel(['t = ',num2str(n*dt),', N = ',num2str(Nx)])
-            title(['NS, IB-MAC, ',kID])
+            title(['Standard IB, ',kID])
             axis equal
             axis([0,L,0,L])
             %axis([.2,.5,.5,.8]);
