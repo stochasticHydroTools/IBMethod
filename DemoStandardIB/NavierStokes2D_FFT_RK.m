@@ -47,7 +47,7 @@ w2=(-rho/dt)*u(:,:,2)+rho*ADV(:,:,2)-mu/2*Laplacian2D(u(:,:,2),N,h)-f(:,:,2);
 Divw=(w1(xp,:)-w1)/h + (w2(:,yp)-w2)/h;
 pp=PoissonSolver2D(Divw,L_hat2);
 
-%% solve for unew=u(n+1/2)
+%% solve for unew=u(n+1)
 c3=dt/rho;
 r1=u(:,:,1)-dt*ADV(:,:,1)+c2*Laplacian2D(u(:,:,1),N,h)+c3*f(:,:,1)-c3*(pp-pp(xm,:))/h;
 r2=u(:,:,2)-dt*ADV(:,:,2)+c2*Laplacian2D(u(:,:,2),N,h)+c3*f(:,:,2)-c3*(pp-pp(:,ym))/h;

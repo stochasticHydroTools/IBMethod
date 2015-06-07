@@ -1,3 +1,25 @@
+% *************************************************************************
+%   NS2D_IBMACmain.m
+%   Author: Yuanxun Bill Bao
+%   July 2014
+%   
+%   L:        domain [0,L]x[0,L]
+%   mu:       viscosity
+%   rho:      density
+%   Kernel:   choice of IB kernel
+%   showplot: plotting 'on' or 'off'
+%   mexFlag:  '1' use mex excutables, '0' use matlab routines (slower)
+%   Nx,Ny:    Eulerian grid size
+%   h:        grid spacing
+%   Ns:       Lagrangian grid size
+%   ds:       Lagrangian grid spacing
+%   X:        initial configuration
+%   u:        initial velocity
+%   tend:     final time
+%   dt:       timestep
+%   Nt:       number of timesteps
+% *************************************************************************
+
 clear; restoredefaultpath;
 addpath('../IBKernels/')
 
@@ -10,13 +32,13 @@ L=1;
 mu=0.01;
 rho=1;
 
-%Kernel = {'flex6pt','', 59/60-sqrt(29)/20};
-Kernel = {'stnd4pt','', []};
+Kernel = {'flex6pt','', 59/60-sqrt(29)/20};
+%Kernel = {'stnd4pt','', []};
 %Kernel = {'stnd3pt','', []};
 %Kernel={'bspline4pt','',[]};
 
 showplot = 'on';
-mexFlag = 0;
+mexFlag = 1;
 
 % Eulerian grid size
 Nx=64; Ny=Nx;
@@ -35,11 +57,10 @@ X = [alpha*cos(s'), beta*sin(s')]*L+L/2;
 u=zeros(Nx,Ny,2);
 
 % time step
-tend = .75;
-dt   = 0.005;
+tend = 2;
+dt   = h/2;
 Nt   = floor(tend/dt);
 dt   = tend/Nt;
-tt   = 0:dt:tend;
 Nf   = 2; % plot every Nf timesteps
 
 tic
