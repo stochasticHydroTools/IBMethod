@@ -6,7 +6,7 @@ IBKernels
 * deltaCK.m deltaCKplot.m are Matlab codes demonstrating the new Gaussian-like 6pt IB kernel
 * Matlab codes for IB kernels are stnd3pt.m, stnd4pt.m, bspline4pt.m, flex6pt.m. First derivatives of the 4pt B-spline and the new 6pt kernels are also available in bspline4pt_d.m and flex6pt_d.m. The C version of these kernels are available in Kernels.c
 * phiweights.m computes weights of spreading/interpolation in 1D. To get weights in 2D/3D, one needs to compute a tensor product. The C version is available in KernelGrid2D.c and KernelGrid3D.c. No tensor product is required as the C codes already take care of it. 
-* *mexa64, *mexamaci64 are MEX executables of KernelGrid2D.c and KernelGrid3D.c on Linux and OSX platforms. One can use them in a Matlab program to speed up computing IB weights. 
+* *mexa64, *mexamaci64 are MEX executables of KernelGrid2D.c and KernelGrid3D.c on Linux and OSX platforms. One can use them in a Matlab program to speed up computing IB weights. To recompile, type in Matlab: mex KernelGrid2D.c Kernels.c
 
 DemoStandardIB
 * contains codes for a demo of a 2D elastic membrane immersed in a viscous incompressible fluid. Spatial discretization of the fluid domain is based on the staggered(MAC) grid. The main time-stepping scheme is the 2nd order Adams-Bashforth method.
