@@ -9,9 +9,9 @@ IBKernels
 * *mexa64, *mexamaci64 are MEX executables of KernelGrid2D.c and KernelGrid3D.c on Linux and OSX platforms. One can use them in a Matlab program to speed up computing IB weights. 
 
 DemoStandardIB
-* contains codes for a demo of a 2D elastic membrane immersed in a viscous incompressible fluid.
+* contains codes for a demo of a 2D elastic membrane immersed in a viscous incompressible fluid. Spatial discretization of the fluid domain is based on the staggered(MAC) grid. The main time-stepping scheme is the 2nd order Adams-Bashforth method.
 * NS2D_IBMACmain.m is the main program. Users can set fluid parameters, grid resolutions, choice of IB kernel and other parameters in this code. 
 * NS2D_IBMAC.m is called by NS2D_IBMACmain.m to carry out the main steps of the simulation.
-* spreadMAC2Dvector.m and interpMAC2Dvector.m: force spreading and velocity interpolation to a MAC grid. Users have the option to use MEX excutables to speed up calcuation of weights. 
+* spreadMAC2Dvector.m and interpMAC2Dvector.m: force spreading and velocity interpolation to the MAC grid. Users have the option to use MEX excutables to speed up calcuation of weights. 
 * NavierStokes2D_FFT.m: a FFT-based 2D Navier-Stokes fluid solver, used in the main loop of time stepping
-* NavierStokes2D_FFT_RK.m: a FFT-based 2D Navier-Stokes fluid solver, used only in the beginning to get another initial conditiong via RK2
+* NavierStokes2D_FFT_RK.m: a FFT-based 2D Navier-Stokes fluid solver, used only in the beginning to get another initial condition via RK2
