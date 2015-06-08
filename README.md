@@ -1,5 +1,6 @@
 # IBMethod
-The IBMethod repository contains codes developed for the Immersed Boundary Method of Peskin.
+Codes developed for the Immersed Boundary Method of Peskin
+by Yuan-Xun (Bill) Bao with contributions from Jason Kaye, Courant Institute
 
 The new "flexible" 6pt kernel implemented in flex6pt.m is described and derived in (see references there-in for the standard 3-point and 4-point Peskin kernels):
 
