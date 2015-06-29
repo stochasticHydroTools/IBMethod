@@ -2,7 +2,7 @@
 Codes developed for the Immersed Boundary Method of Peskin
 by Yuan-Xun (Bill) Bao with contributions from Jason Kaye, Courant Institute
 
-The new "flexible" 6pt kernel implemented in flex6pt.m is described and derived in (see references there-in for the standard 3-point and 4-point Peskin kernels):
+The new "flexible" 6pt kernel implemented in flex6pt.m is described and derived in (see references there-in for the standard 3-point and 4-point Peskin kernels), see file IBKernelNote.pdf:
 
  "A Gaussian-Like Immersed Boundary Kernel with Improved Translational Invariance and Smoothness"
  by Yuan-Xun Bao, Jason Kaye, Charles S. Peskin, http://arxiv.org/abs/1505.07529
