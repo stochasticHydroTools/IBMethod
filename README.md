@@ -7,10 +7,7 @@ The new C3 5pt and 6pt kernels are implemented in "flex5pt.m" and "flex6pt.m". D
 "Gaussian-like immersed-boundary kernels with three continuous derivatives and improved translation invariance"
  by Yuanxun Bao, Alexander D. Kaiser, Jason Kaye, Charles S. Peskin, http://arxiv.org/abs/1505.07529
 
-and the published version is available at: 
-http://www.sciencedirect.com/science/article/pii/S0021999116300663
-
-Note that the arXiv version is an update to the published version. 
+The arXiv version is an update to the published version: http://www.sciencedirect.com/science/article/pii/S0021999116300663
 
 Also implemented is the standard 4-point B-spline, which can be obtained by repeatedly convolving a hat function with itself (http://www.chebfun.org/examples/approx/BSplineConv.html). Note these are not Peskin kernels per se and are not constructed with specific care to grid invariance but they are nevertheless useful, notably, they are smoother than the Peskin kernels and in the limit of infinite support they approach a Gaussian kernel.
 
@@ -19,8 +16,7 @@ Directory IBKernels:
 
 1. contains codes for computing IB kernels and routines for computing weights used in force spreading and velocity interpolation.
 
-2. "deltaCK.m", "deltaCKplot.m" are Matlab codes that plot the new C3 6pt IB kernel,
-   "delta_5_smooth.m", "plot_delta_5_smooth" are Matlab codes that plot the new C3 5pt kernel.  
+2. "deltaCK.m", "deltaCKplot.m" are Matlab codes that plot the new C3 6pt IB kernel, "delta_5_smooth.m", "plot_delta_5_smooth" are Matlab codes that plot the new C3 5pt kernel.  
 
 3. Matlab codes for IB kernels are "stnd3pt.m", "stnd4pt.m", "bspline4pt.m", "bspline6pt", "flex5pt.m", "flex6pt.m". First derivatives of the IB kernels  are also available in "bspline4pt_d.m", "bspline6pt.m", "flex5pt.m" and "flex6pt_d.m". The C version of these kernels are available in Kernels.c.
 
