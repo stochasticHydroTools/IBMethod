@@ -1,7 +1,7 @@
 function val = flex5pt_d(x,KK)
 
+% The special value of K that gives C^3 kernel
 % KK = (38 - sqrt(69))/60; 
-% KK = (38 + sqrt(69))/60; 
 
 disc = @(r) sqrt(3123 - 6840*KK + 3600*KK.^2 - 12440*r.^2 + 25680*KK*r.^2 - 12600*KK.^2*r.^2 + 8080*r.^4 - 8400*KK*r.^4 - 1400*r.^6);
 
