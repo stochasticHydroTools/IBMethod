@@ -14,15 +14,15 @@ Directory IBKernels:
 
 1. contains codes for computing IB kernels and routines for computing weights used in force spreading and velocity interpolation.
 
-2. deltaCK.m deltaCKplot.m are Matlab codes demonstrating the new Gaussian-like 6pt IB kernel
+2. "deltaCK.m", "deltaCKplot.m" are Matlab codes that plot the new C3 6pt IB kernel,
+   "delta_5_smooth.m", "plot_delta_5_smooth" are Matlab codes that plot the new C3 5pt kernel.  
 
-3. Matlab codes for IB kernels are stnd3pt.m, stnd4pt.m, bspline4pt.m, flex6pt.m. First derivatives of the 4pt B-spline and the new 
-6pt kernels are also available in bspline4pt_d.m and flex6pt_d.m. The C version of these kernels are available in Kernels.c.
+3. Matlab codes for IB kernels are "stnd3pt.m", "stnd4pt.m", "bspline4pt.m", "bspline6pt", "flex5pt.m", "flex6pt.m". First derivatives of the IB kernels  are also available in "bspline4pt_d.m", "bspline6pt.m", "flex5pt.m" and "flex6pt_d.m". The C version of these kernels are available in Kernels.c.
 
 4. phiweights.m computes weights of spreading/interpolation in 1D. To get weights in 2D/3D, one needs to compute a tensor product. The C version is available in KernelGrid2D.c and KernelGrid3D.c. No tensor product is required as the C codes already take care of it. 
 
 5. to obtain MEX executables of KernelGrid2D.c and KernelGrid3D.c to speed up computing IB weights, execute in Matlab:
-mex KernelGrid2D.c Kernels.c
+mex KernelGrid2D.c Kernels.c OR mex KernelGrid3D.c Kernels.c
 
 Directory DemoStandardIB
 ------------------------------------
