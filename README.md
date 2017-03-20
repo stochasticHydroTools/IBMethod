@@ -2,11 +2,16 @@
 Codes developed for the Immersed Boundary Method of Peskin
 by Yuanxun (Bill) Bao with contributions from Jason Kaye, Alex Kaiser @ Courant Institute
 
-The new C3 5pt and 6pt kernels are implemented in flex5pt.m and flex6pt.m. Documentation and derivation of these kernels can be found in (see references there-in for the standard 3-point and 4-point Peskin kernels), see file IBKernelNote.pdf:
-
- "Gaussian-like immersed-boundary kernels with three continuous derivatives and improved translation invariance"
+The new C3 5pt and 6pt kernels are implemented in "flex5pt.m" and "flex6pt.m". Documentation and derivation of these kernels can be found in IBKernelNote.pdf:
+  
+"Gaussian-like immersed-boundary kernels with three continuous derivatives and improved translation invariance"
  by Yuanxun Bao, Alexander D. Kaiser, Jason Kaye, Charles S. Peskin, http://arxiv.org/abs/1505.07529
- 
+
+and the published version is available at: 
+http://www.sciencedirect.com/science/article/pii/S0021999116300663
+
+Note that the arXiv version is an update to the published version. 
+
 Also implemented is the standard 4-point B-spline, which can be obtained by repeatedly convolving a hat function with itself (http://www.chebfun.org/examples/approx/BSplineConv.html). Note these are not Peskin kernels per se and are not constructed with specific care to grid invariance but they are nevertheless useful, notably, they are smoother than the Peskin kernels and in the limit of infinite support they approach a Gaussian kernel.
 
 Directory IBKernels:
