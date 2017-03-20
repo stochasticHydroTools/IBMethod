@@ -32,10 +32,15 @@ L=1;
 mu=0.01;
 rho=1;
 
+% choice of kernels
 Kernel = {'flex6pt','', 59/60-sqrt(29)/20};
+%Kernel = {'flex5pt','', 38/60-sqrt(69)/60};
 %Kernel = {'stnd4pt','', []};
 %Kernel = {'stnd3pt','', []};
-%Kernel={'bspline4pt','',[]};
+%Kernel = {'bspline4pt','',[]};
+%Kernel = {'bspline6pt','',[]};
+
+
 
 showplot = 'on';
 mexFlag = 1;
